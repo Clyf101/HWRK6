@@ -15,7 +15,7 @@ const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?appid
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?appid=${apiKey}&units=imperial&q=`;
 
 
-// Define an empty array to store search history
+
 let searchHistory = [];
 
 // Define a function to fetch and display current weather for a given city
@@ -30,7 +30,7 @@ async function getCurrentWeather(city) {
     temperature.textContent = `Temperature: ${data.main.temp} °F`;
     humidity.textContent = `Humidity: ${data.main.humidity}%`;
     windSpeed.textContent = `Wind Speed: ${data.wind.speed} MPH`;
-    // Add city to search history and update history list
+    //  city  search history and update history list
     searchHistory.push(city);
     historyList.innerHTML = "";
     searchHistory.forEach((city) => {
